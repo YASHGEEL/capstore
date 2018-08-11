@@ -26,8 +26,7 @@ public class PromoCode
 	  
 	  float discountAmount;
 	  
-	  @OneToOne()
-	  Category category;
+	  int minimumAmount;
 
 	public int getId() {
 		return id;
@@ -77,16 +76,16 @@ public class PromoCode
 		this.discountAmount = discountAmount;
 	}
 
-	public Category getCategory() {
-		return category;
+	public int getMinimumAmount() {
+		return minimumAmount;
 	}
 
-	public void setCategory(Category category) {
-		this.category = category;
+	public void setMinimumAmount(int minimumAmount) {
+		this.minimumAmount = minimumAmount;
 	}
 
 	public PromoCode(int id, Date startTime, Date endTime, String name, String description, float discountAmount,
-			Category category) {
+			int minimumAmount) {
 		super();
 		this.id = id;
 		this.startTime = startTime;
@@ -94,7 +93,7 @@ public class PromoCode
 		this.name = name;
 		this.description = description;
 		this.discountAmount = discountAmount;
-		this.category = category;
+		this.minimumAmount = minimumAmount;
 	}
 
 	public PromoCode() {
@@ -105,9 +104,14 @@ public class PromoCode
 	@Override
 	public String toString() {
 		return "PromoCode [id=" + id + ", startTime=" + startTime + ", endTime=" + endTime + ", name=" + name
-				+ ", description=" + description + ", discountAmount=" + discountAmount + ", category=" + category
-				+ "]";
+				+ ", description=" + description + ", discountAmount=" + discountAmount + ", minimumAmount="
+				+ minimumAmount + "]";
 	}
-	  
+
+	
+
+	
+
+
 	  
 }
