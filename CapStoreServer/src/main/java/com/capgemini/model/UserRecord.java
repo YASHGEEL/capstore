@@ -6,7 +6,7 @@ import javax.persistence.Id;
 public class UserRecord {  
     @Id  
     private String id;  
-    private String name;  
+    private String name1;  
     private String email;  
     public UserRecord(){}  
     
