@@ -16,20 +16,5 @@ import java.util.Optional;
   
 @RestController  
 public class UserController {  
-    @Autowired  
-    private UserService userService;   
-    @RequestMapping("/")  
-    public List<Customer> getAllUser(){  
-        return userService.getAllUsers();  
-    }     
-    @RequestMapping(value="/add-user", method=RequestMethod.POST)  
-    public void addUser(@RequestBody Customer userRecord){  
-        userService.addUser(userRecord);  
-    }  
-    
-    
-    /*  @RequestMapping(value="/user/{id}", method=RequestMethod.GET)  
-    public Optional<UserRecord> getUser(@PathVariable String id){  
-        return userService.getUser(id);  
-    } */ 
+  
 }  
